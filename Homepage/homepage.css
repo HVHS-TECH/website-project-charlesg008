@@ -11,9 +11,15 @@
 body{
     min-height: 100vh;
     background-color: black;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+h1{
+    font-weight: 700;
 }
 nav{
     background-color: #373737;
+    border-bottom: 0.13em solid white;
 }
 .homepageNav{
     width: 100%;
@@ -26,6 +32,13 @@ nav{
     background-color: black;
     grid-column: 1/ span 1;
     grid-row: 2/ span 1;
+}
+
+.heroText h1{
+    color:white;
+    font-size: 5.1vw;
+    line-height: 1.2;
+    margin: 0 1rem;
 }
 
 .heroImage{
@@ -60,22 +73,41 @@ nav{
     grid-row: 5/ span 1;
 }
 
+.desktopMenu{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 #mobileBurger{
     display: none;
 }
 
-nav ul{
-    width: 100%;
-    list-style: none;
+.navCentre {
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
 }
 
-nav li{
+.navRight{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navCentre li, .navRight li{
     height: 50px;
 }
-nav a{
+.navCentre a, .navRight a{
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -83,7 +115,7 @@ nav a{
     align-items: center;
     color: white;
 }
-nav a:hover{
+.navCentre a:hover, .navRight a:hover{
     background-color: #474747;
 }
 

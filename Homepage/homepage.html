@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, scale=1.0" />
     <link rel="stylesheet" href="homepage.css" />
     <script src="homepage.js" defer></script>
-    <title>Hamburger bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Homepage</title>
 </head>
 
 <body>
@@ -24,25 +28,29 @@
                     <li class="signUpMobTab"><a href='../RegistrationLogin/registration.html''>Sign up</a></li>
 
                 </ul>
-                <ul>
-                    <div class="desktopMenu">
-                        <li><a href='homepage.html'>Home</a></li>
-                        <li><a href='../Catagories/catagories.html'>Catagories</a></li>
-                        <li><a href='../Game Info/gameInfo.html'>Game Info</a></li>
-                        <li><a href='../RegistrationLogin/login.html'>Login</a></li>
-                        <li class="signUpPC"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
-                    </div>
+                <div class="desktopMenu">
+                <ul class="navCentre">
+                    <li><a href=' homepage.html'>Home</a></li>
+                    <li><a href='../Catagories/catagories.html'>Catagories</a></li>
+                    <li><a href='../Game Info/gameInfo.html'>Game Info</a></li>
+                </ul>
+                <ul class="navRight">
+                    <li class="loginPC"><a href='../RegistrationLogin/login.html'>Login</a></li>
+                    <li class="signUpPC"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
                     <li id="mobileBurger" onclick="showSidebar()"><a href="#"><img id="openmenu"
                                 src="../Media/Navbar/openmenu.png"></a></li>
                 </ul>
-            </nav>
         </div>
-        <div class="heroText"></div>
-        <div class="heroImage"></div>
-        <div class="pageSplit"></div>
-        <div class="mainInfo"></div>
-        <div class="versusBox1"></div>
-        <div class="versusBox2"></div>
+        </nav>
+    </div>
+    <div class="heroText">
+        <h1>Aotearoa's<br>First<br>All&#8209;Inclusive<br>Pump it Up<br>Tournament</h1>
+    </div>
+    <div class="heroImage"></div>
+    <div class="pageSplit"></div>
+    <div class="mainInfo"></div>
+    <div class="versusBox1"></div>
+    <div class="versusBox2"></div>
 
     </div>
 </body>
