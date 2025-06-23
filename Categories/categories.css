@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.categoriesGrid{
+    display: grid;
+    grid-template-columns: 21% 57% 21%;
+    grid-template-rows: 7vh 30vh 90vh;
+}
+body{
+    cursor: url("../Media/Cursor/cursorNormal.png"),auto;
+    min-height: 100vh;
+    background-color: black;
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+
+}
+
+a:hover{
+    cursor: url("../Media/Cursor/cursorHover.png"),auto;
+}
+h1{
+    font-weight: 700;
+}
+nav{
+    padding-top: 0.4rem;
+    background-color: #373737;
+    border-bottom: 0.1em solid white;
+    font-size: 1.4rem;
+    height: 100%;
+}
+.categoriesNav{
+    width: 100%;
+    list-style: none;
+    grid-column: 1/ span 3;
+    grid-row: 1/ span 1;
+}
+
+.heroImage{
+    height: 100%;
+    width: 100%;
+    grid-column: 1/ span 3;
+    grid-row: 2/ span 1;
+}
+
+.heroText{
+    background-color: black;
+    grid-column: 2/ span 1;
+    text-align: center;
+
+}
+
+.heroText h1{
+    color:white;
+    padding-top: 2em;
+    font-size: 5rem;
+}
+
+
+.categoriesTable{
+    background-color: black;
+    grid-column: 1/span 3;
+    grid-row: 3/ span 1;
+
+}
+.desktopMenu{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#mobileBurger{
+    display: none;
+}
+
+nav{
+    font-size: 2rem;
+}
+.navCentre {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navRight{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navCentre li, .navRight li{
+    height: 50px;
+}
+.navCentre a, .navRight a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.navCentre a:hover, .navRight a:hover{
+    background-color: #474747;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.445);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.sidebar a:hover{
+    background-color: #14141454;
+}
+
+#openmenu{
+    width: 30px;
+    height: 30px;
+}
+
+#closemenu{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .desktopMenu{
+        display: none;
+    }
+    #mobileBurger{
+        display: flex;
+    }
+}
