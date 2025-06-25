@@ -6,7 +6,7 @@
 
 .categoriesGrid{
     display: grid;
-    grid-template-columns: 21% 57% 21%;
+    grid-template-columns: 21% 21% 16% 21% 21%;
     grid-template-rows: 3em 13em 50em;
 }
 body{
@@ -33,15 +33,14 @@ nav{
 .categoriesNav{
     width: 100%;
     list-style: none;
-    grid-column: 1/ span 3;
+    grid-column: 1/ span 6;
     grid-row: 1/ span 1;
 }
 
 .heroText{
     background-color: black;
-    grid-column: 2/ span 1;
+    grid-column: 2/ span 3;
     text-align: center;
-
 }
 
 .heroText h1{
@@ -53,8 +52,10 @@ nav{
 
 .categoriesTable{
     background-color: black;
-    grid-column: 1/span 3;
+    grid-column: 1/span 6;
     grid-row: 3/ span 1;
+    text-align: center;
+    margin: 1rem auto ; 
 
 }
 .desktopMenu{
