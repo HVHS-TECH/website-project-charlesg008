@@ -7,7 +7,7 @@
 .categoriesGrid{
     display: grid;
     grid-template-columns: 21% 57% 21%;
-    grid-template-rows: 7vh 30vh 90vh;
+    grid-template-rows: 3em 13em 50em;
 }
 body{
     cursor: url("../Media/Cursor/cursorNormal.png"),auto;
@@ -25,24 +25,16 @@ h1{
     font-weight: 700;
 }
 nav{
-    padding-top: 0.4rem;
     background-color: #373737;
     border-bottom: 0.1em solid white;
-    font-size: 1.4rem;
     height: 100%;
+    font-size: 2rem;
 }
 .categoriesNav{
     width: 100%;
     list-style: none;
     grid-column: 1/ span 3;
     grid-row: 1/ span 1;
-}
-
-.heroImage{
-    height: 100%;
-    width: 100%;
-    grid-column: 1/ span 3;
-    grid-row: 2/ span 1;
 }
 
 .heroText{
@@ -54,8 +46,8 @@ nav{
 
 .heroText h1{
     color:white;
-    padding-top: 2em;
     font-size: 5rem;
+    padding-top: 1.3em;
 }
 
 
