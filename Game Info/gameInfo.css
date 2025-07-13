@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gameInfoGrid{
+    display: grid;
+    grid-template-columns: 21% 21% 16% 21% 21%;
+    grid-template-rows: 3em 40.15em 3em 43em 12em;
+}
+body{
+    cursor: url("../Media/Cursor/cursorNormal.png"),auto;
+    min-height: 100vh;
+    background-color: black;
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+
+}
+
+a:hover{
+    cursor: url("../Media/Cursor/cursorHover.png"),auto;
+}
+h1{
+    font-weight: 700;
+}
+nav{
+    background-color: #373737;
+    border-bottom: 0.1em solid white;
+    height: 100%;
+    font-size: 2rem;
+}
+.gameInfoNav{
+    width: 100%;
+    list-style: none;
+    grid-column: 1/ span 6;
+    grid-row: 1/ span 1;
+}
+
+.heroSection{
+    grid-column: 1/ span 6;
+    grid-row: 2/ span 1;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+.heroImage{
+    height: 100%;
+    width: 100%;
+}
+
+.heroText{
+    background-color: black;
+    grid-column: 1/ span 1;
+
+}
+
+.heroText h1{
+    color:white;
+    font-size: 6rem;
+    line-height: 1.37;
+    margin: 0 1rem;
+}
+
+.heroImage{
+    grid-column: 2/ span 1;
+    /*background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.425), rgb(0, 0, 0)), url("../Media/gameInfo/heroimage.jpg");
+    */ 
+    background-image: url("../Media/gameInfo/heroimagealternate2.png");
+    background-repeat: no-repeat;
+    background-size: 75em;
+}
+
+.pageSplit{
+    background-color: blue;
+    grid-column: 1/ span 6;
+    grid-row: 3/ span 1;
+    background-image: url("../Media/gameInfo/pagesplitter.png");
+    background-color:rgb(0, 0, 0, 0.7);
+    background-position: center;
+    background-blend-mode: darken;
+    border-top: 0.1em solid white;
+    border-bottom: 0.1em solid white;
+}
+
+.splitDates, .splitLocation{
+    padding: 0.5rem;
+}
+
+.splitDates{
+    float: left;
+}
+
+.splitLocation{
+    float: right;
+}
+
+.mainInfo{
+    background-color: black;
+    grid-column: 1/span 6;
+    grid-row: 4/ span 1;
+}
+
+.mainInfoIntro{
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.mainInfoCategories{
+    padding-top: 1rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.mainInfoTable{
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+.mainInfoTable th{
+    padding-right: 3rem;
+}
+
+.versusBox1{
+    background-color: blueviolet;
+    grid-column: 1/ span 2;
+    grid-row: 5/ span 1;
+
+}
+
+.versusBox2{
+    background-color: blueviolet;
+    grid-column: 4/ span 2;
+    grid-row: 5/ span 1;
+}
+
+.desktopMenu{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#mobileBurger{
+    display: none;
+}
+
+.navCentre {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+}
+
+.navRight{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navCentre li, .navRight li{
+    height: 50px;
+}
+.navCentre a, .navRight a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.navCentre a:hover, .navRight a:hover{
+    background-color: #474747;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.445);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.sidebar a:hover{
+    background-color: #14141454;
+}
+
+#openmenu{
+    width: 30px;
+    height: 30px;
+}
+
+#closemenu{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .desktopMenu{
+        display: none;
+    }
+    #mobileBurger{
+        display: flex;
+    }
+}
