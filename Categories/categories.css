@@ -7,7 +7,7 @@
 .categoriesGrid{
     display: grid;
     grid-template-columns: 21% 21% 16% 21% 21%;
-    grid-template-rows: 3em 13em 50em;
+    grid-template-rows: 3em 20em 43em 12em;
 }
 body{
     cursor: url("../Media/Cursor/cursorNormal.png"),auto;
@@ -37,27 +37,105 @@ nav{
     grid-row: 1/ span 1;
 }
 
+.heroSection{
+    grid-column: 1/ span 6;
+    grid-row: 2/ span 1;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
 .heroText{
     background-color: black;
     grid-column: 2/ span 3;
-    text-align: center;
+
 }
 
 .heroText h1{
     color:white;
-    font-size: 5rem;
-    padding-top: 1.3em;
+    font-size: 6rem;
+    line-height: 1.37;
+    margin: 0 1rem;
 }
 
+.heroImage{
+    grid-column: 2/ span 1;
+    /*background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.425), rgb(0, 0, 0)), url("../Media/categories/heroimage.jpg");
+    */ 
+    background-image: url("../Media/categories/heroimagealternate2.png");
+    background-repeat: no-repeat;
+    background-size: 75em;
+}
 
-.categoriesTable{
+.pageSplit{
+    background-color: blue;
+    grid-column: 1/ span 6;
+    grid-row: 3/ span 1;
+    background-image: url("../Media/categories/pagesplitter.png");
+    background-color:rgb(0, 0, 0, 0.7);
+    background-position: center;
+    background-blend-mode: darken;
+    border-top: 0.1em solid white;
+    border-bottom: 0.1em solid white;
+}
+
+.splitDates, .splitLocation{
+    padding: 0.5rem;
+}
+
+.splitDates{
+    float: left;
+}
+
+.splitLocation{
+    float: right;
+}
+
+.mainInfo{
     background-color: black;
     grid-column: 1/span 6;
-    grid-row: 3/ span 1;
+    grid-row: 4/ span 1;
+}
+
+.mainInfoIntro{
+    padding: 1rem;
     text-align: center;
-    margin: 1rem auto ; 
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.mainInfoCategories{
+    padding-top: 1rem;
+    padding-bottom: 0.3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+
+.mainInfoTable{
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 1.6;
+}
+
+.mainInfoTable th{
+    padding-right: 3rem;
+}
+
+.versusBox1{
+    background-color: blueviolet;
+    grid-column: 1/ span 2;
+    grid-row: 5/ span 1;
 
 }
+
+.versusBox2{
+    background-color: blueviolet;
+    grid-column: 4/ span 2;
+    grid-row: 5/ span 1;
+}
+
 .desktopMenu{
     position: relative;
     display: flex;
@@ -70,12 +148,8 @@ nav{
     display: none;
 }
 
-nav{
-    font-size: 2rem;
-}
 .navCentre {
     display: flex;
-    gap: 30px;
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -87,7 +161,6 @@ nav{
     right: 0;
     display: flex;
     align-items: center;
-    gap: 20px;
     list-style: none;
     padding: 0;
     margin: 0;
