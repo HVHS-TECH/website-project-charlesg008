@@ -164,11 +164,79 @@ nav{
     height: 30px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024) and (orientation: landscape){
     .desktopMenu{
         display: none;
     }
     #mobileBurger{
         display: flex;
     }
+
+
+}
+
+@media screen and (max-width: 450px){
+    .desktopMenu{
+        display: none;
+    }
+    #mobileBurger{
+        display: flex;
+    }
+
+    .gameInfoGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 4em 7em 15em 17em 25em 50em 12em 9em;
+    }
+
+    .gameInfoNav{
+    width: 100%;
+    list-style: none;
+    grid-column: 1;
+    grid-row: 1/ span 1;
+}
+
+.heroSection{
+    grid-column: 1;
+    grid-row: 2;
+    background-color: aqua;
+}
+
+.gameExpl{
+    grid-column: 1;
+    grid-row: 3;
+    background-color: blue;
+}
+
+.gameExplImg{
+    grid-column: 4;
+    grid-row: 4;
+    background-color: cadetblue;
+}
+
+.howToPlay{
+    grid-column: 1;
+    grid-row: 5;
+    background-color: pink;
+}
+
+.gameTimeline{
+    grid-column: 1;
+    grid-row: 6;
+    background-color: blueviolet;
+}
+
+
+.resources{
+    grid-column: 3;
+    grid-row: 7;
+    background-color: #767676;
+}
+
+.featuredPlayers{
+    grid-column: 1;
+    grid-row: 8;
+    background-color: #7ae794;
+}
+
 }
