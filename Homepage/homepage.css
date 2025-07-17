@@ -29,6 +29,7 @@ nav{
     border-bottom: 0.1em solid white;
     height: 100%;
     font-size: 2rem;
+    overflow: hidden;
 }
 .homepageNav{
     width: 100%;

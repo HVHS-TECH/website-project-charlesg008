@@ -1,16 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.gameInfoGrid{
+.gameInfoGrid {
     display: grid;
     grid-template-columns: 21% 21% 16% 21% 21%;
     grid-template-rows: 3em 9em 20em 25em 25em 30em 9em;
 }
-body{
-    cursor: url("../Media/Cursor/cursorNormal.png"),auto;
+
+body {
+    cursor: url("../Media/Cursor/cursorNormal.png"), auto;
     min-height: 100vh;
     background-color: black;
     font-family: 'Chakra Petch', sans-serif;
@@ -18,74 +19,78 @@ body{
 
 }
 
-a:hover{
-    cursor: url("../Media/Cursor/cursorHover.png"),auto;
+a:hover {
+    cursor: url("../Media/Cursor/cursorHover.png"), auto;
 }
-h1{
+
+h1 {
     font-weight: 700;
 }
-nav{
+
+nav {
     background-color: #373737;
     border-bottom: 0.1em solid white;
     height: 100%;
     font-size: 2rem;
+    overflow: hidden;
 }
-.gameInfoNav{
+
+.gameInfoNav {
     width: 100%;
     list-style: none;
     grid-column: 1/ span 6;
     grid-row: 1/ span 1;
 }
 
-.heroSection{
+.heroSection {
     grid-column: 1/ span 5;
     grid-row: 2/ span 1;
     background-color: aqua;
 }
 
-.gameExpl{
+.gameExpl {
     grid-column: 1/ span 3;
     grid-row: 3/ span 1;
     background-color: blue;
 }
 
-.gameExplImg{
+.gameExplImg {
     grid-column: 4/ span 2;
     grid-row: 3/ span 1;
     background-color: cadetblue;
 }
 
-.howToPlay{
+.howToPlay {
     grid-column: 1/ span 4;
     grid-row: 4/ span 1;
     background-color: pink;
 }
 
-.gameTimeline{
+.gameTimeline {
     grid-column: 1/ span 5;
     grid-row: 5/ span 1;
     background-color: blueviolet;
 }
 
-.resourceImg{
+.resourceImg {
     grid-column: 1/ span 2;
     grid-row: 6/ span 1;
     background-color: aliceblue;
 }
 
-.resources{
+.resources {
     grid-column: 3/ span 3;
     grid-row: 6/ span 1;
     background-color: #767676;
 }
 
-.featuredPlayers{
+.featuredPlayers {
     grid-column: 1/ span 5;
     grid-row: 7/ span 1;
     background-color: #7ae794;
 }
 
-.desktopMenu{
+.desktopMenu {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -93,7 +98,7 @@ nav{
     width: 100%;
 }
 
-#mobileBurger{
+#mobileBurger {
     display: none;
 }
 
@@ -105,7 +110,7 @@ nav{
     position: relative;
 }
 
-.navRight{
+.navRight {
     position: absolute;
     right: 0;
     display: flex;
@@ -114,10 +119,14 @@ nav{
     padding: 0;
     margin: 0;
 }
-.navCentre li, .navRight li{
+
+.navCentre li,
+.navRight li {
     height: 50px;
 }
-.navCentre a, .navRight a{
+
+.navCentre a,
+.navRight a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -125,11 +134,13 @@ nav{
     align-items: center;
     color: white;
 }
-.navCentre a:hover, .navRight a:hover{
+
+.navCentre a:hover,
+.navRight a:hover {
     background-color: #474747;
 }
 
-.sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -144,99 +155,160 @@ nav{
     justify-content: flex-start;
 }
 
-.sidebar li{
+.sidebar li {
     width: 100%;
 }
-.sidebar a{
+
+.sidebar a {
     width: 100%;
 }
-.sidebar a:hover{
+
+.sidebar a:hover {
     background-color: #14141454;
 }
 
-#openmenu{
+#openmenu {
     width: 30px;
     height: 30px;
 }
 
-#closemenu{
+#closemenu {
     width: 30px;
     height: 30px;
 }
 
-@media screen and (max-width: 1024) and (orientation: landscape){
-    .desktopMenu{
+@media screen and (max-width: 1024){
+    .desktopMenu {
         display: none;
     }
-    #mobileBurger{
+
+    #mobileBurger {
         display: flex;
     }
+
+    .gameInfoGrid {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        grid-template-rows: 4em 7em 15em 17em 25em 50em 12em 9em;
+    }
+
+    .gameInfoNav {
+        width: 100%;
+        list-style: none;
+        grid-column: 1;
+        grid-row: 1/ span 1;
+    }
+
+    .heroSection {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: aqua;
+    }
+
+    .gameExpl {
+        grid-column: 1;
+        grid-row: 3;
+        background-color: blue;
+    }
+
+    .gameExplImg {
+        grid-column: 4;
+        grid-row: 4;
+        background-color: cadetblue;
+    }
+
+    .howToPlay {
+        grid-column: 1;
+        grid-row: 5;
+        background-color: pink;
+    }
+
+    .gameTimeline {
+        grid-column: 1;
+        grid-row: 6;
+        background-color: blueviolet;
+    }
+
+
+    .resources {
+        grid-column: 3;
+        grid-row: 7;
+        background-color: #767676;
+    }
+
+    .featuredPlayers {
+        grid-column: 1;
+        grid-row: 8;
+        background-color: #7ae794;
+    }
+
 
 
 }
 
-@media screen and (max-width: 450px){
-    .desktopMenu{
+@media screen and (max-width: 450px) {
+    .desktopMenu {
         display: none;
     }
-    #mobileBurger{
+
+    #mobileBurger {
         display: flex;
     }
 
-    .gameInfoGrid{
+    .gameInfoGrid {
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 4em 7em 15em 17em 25em 50em 12em 9em;
     }
 
-    .gameInfoNav{
-    width: 100%;
-    list-style: none;
-    grid-column: 1;
-    grid-row: 1/ span 1;
-}
+    .gameInfoNav {
+        width: 100%;
+        list-style: none;
+        grid-column: 1;
+        grid-row: 1/ span 1;
+    }
 
-.heroSection{
-    grid-column: 1;
-    grid-row: 2;
-    background-color: aqua;
-}
+    .heroSection {
+        grid-column: 1;
+        grid-row: 2;
+        background-color: aqua;
+    }
 
-.gameExpl{
-    grid-column: 1;
-    grid-row: 3;
-    background-color: blue;
-}
+    .gameExpl {
+        grid-column: 1;
+        grid-row: 3;
+        background-color: blue;
+    }
 
-.gameExplImg{
-    grid-column: 4;
-    grid-row: 4;
-    background-color: cadetblue;
-}
+    .gameExplImg {
+        grid-column: 4;
+        grid-row: 4;
+        background-color: cadetblue;
+    }
 
-.howToPlay{
-    grid-column: 1;
-    grid-row: 5;
-    background-color: pink;
-}
+    .howToPlay {
+        grid-column: 1;
+        grid-row: 5;
+        background-color: pink;
+    }
 
-.gameTimeline{
-    grid-column: 1;
-    grid-row: 6;
-    background-color: blueviolet;
-}
+    .gameTimeline {
+        grid-column: 1;
+        grid-row: 6;
+        background-color: blueviolet;
+    }
 
 
-.resources{
-    grid-column: 3;
-    grid-row: 7;
-    background-color: #767676;
-}
+    .resources {
+        grid-column: 3;
+        grid-row: 7;
+        background-color: #767676;
+    }
 
-.featuredPlayers{
-    grid-column: 1;
-    grid-row: 8;
-    background-color: #7ae794;
-}
+    .featuredPlayers {
+        grid-column: 1;
+        grid-row: 8;
+        background-color: #7ae794;
+    }
 
 }
