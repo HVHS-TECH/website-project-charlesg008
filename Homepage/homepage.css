@@ -7,7 +7,7 @@
 .homepageGrid{
     display: grid;
     grid-template-columns: 21% 21% 16% 21% 21%;
-    grid-template-rows: 3em 40.15em 3em 43em 12em;
+    grid-template-rows: 3.5em 40.15em 3em 43em 12em;
 }
 body{
     cursor: url("../Media/Cursor/cursorNormal.png"),auto;
