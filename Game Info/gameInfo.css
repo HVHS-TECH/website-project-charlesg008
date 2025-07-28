@@ -42,7 +42,14 @@ nav {
     grid-row: 1/ span 1;
 }
 
-.heroSection, .gameExpl, .gameExplImg, .howToPlay, .gameTimeline, .resourceImg, .resources, .featuredPlayers{
+.heroSection,
+.gameExpl,
+.gameExplImg,
+.howToPlay,
+.gameTimeline,
+.resourceImg,
+.resources,
+.featuredPlayers {
     padding: 1em;
 }
 
@@ -91,8 +98,8 @@ nav {
     grid-row: 4/ span 1;
 }
 
-.htpTitle{
-        font-size: 3.2rem;
+.htpTitle {
+    font-size: 3.2rem;
 }
 
 .gameTimeline {
@@ -102,8 +109,8 @@ nav {
     text-align: center;
 }
 
-.gameTimelineTitle{
-        font-size: 3.2rem;
+.gameTimelineTitle {
+    font-size: 3.2rem;
 
 }
 
@@ -117,7 +124,7 @@ nav {
     grid-row: 6/ span 1;
 }
 
-.resourcesTitle{
+.resourcesTitle {
     font-size: 3.2rem;
 
 }
@@ -127,7 +134,7 @@ nav {
     grid-row: 7/ span 1;
 }
 
-.featuredTitle{
+.featuredTitle {
     font-size: 3.2rem;
 }
 
@@ -268,6 +275,7 @@ nav {
         grid-column: 1;
         grid-row: 6;
         background-color: blueviolet;
+        text-align: center;
     }
 
 
@@ -298,8 +306,8 @@ nav {
 
     .gameInfoGrid {
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 4em 7em 15em 17em 25em 50em 12em 9em;
+        grid-template-columns: auto;
+        grid-template-rows: 4em 7em 15em 17em 25em 50em 20em 17em;
     }
 
     .gameInfoNav {
@@ -312,44 +320,43 @@ nav {
     .heroSection {
         grid-column: 1;
         grid-row: 2;
-        background-color: aqua;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 1.3rem;
     }
 
     .gameExpl {
         grid-column: 1;
         grid-row: 3;
-        background-color: blue;
     }
 
     .gameExplImg {
-        grid-column: 4;
+        grid-column: 1;
         grid-row: 4;
-        background-color: cadetblue;
     }
 
     .howToPlay {
         grid-column: 1;
         grid-row: 5;
-        background-color: pink;
     }
 
     .gameTimeline {
         grid-column: 1;
         grid-row: 6;
-        background-color: blueviolet;
     }
 
 
     .resources {
-        grid-column: 3;
+        grid-column: 1;
         grid-row: 7;
-        background-color: #767676;
     }
 
     .featuredPlayers {
         grid-column: 1;
         grid-row: 8;
-        background-color: #7ae794;
     }
 
 }
