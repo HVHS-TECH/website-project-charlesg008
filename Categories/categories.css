@@ -37,6 +37,10 @@ table, th, td {
   border-collapse: collapse;
 }
 
+ul{
+    list-style: none;
+}
+
 .categoriesNav{
     width: 100%;
     list-style: none;
@@ -111,7 +115,7 @@ table, th, td {
 .navCentre li, .navRight li{
     height: 50px;
 }
-.navCentre a, .navRight a{
+.navCentre a, .navRight a, .sidebar a{
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -159,10 +163,16 @@ table, th, td {
 }
 
 @media screen and (max-width: 450px) {
-    .desktopMenu{
+    .desktopMenu, .loginPC, .signUpPC{
         display: none;
     }
     #mobileBurger{
         display: flex;
+    }
+
+        .categoriesGrid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 3.5em, 15em, 25em;
     }
 }

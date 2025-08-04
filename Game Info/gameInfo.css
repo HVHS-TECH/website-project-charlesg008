@@ -27,6 +27,10 @@ h1 {
     font-weight: 700;
 }
 
+li {
+    list-style: none;
+}
+
 nav {
     background-color: #373737;
     border-bottom: 0.1em solid white;
@@ -174,7 +178,8 @@ nav {
 }
 
 .navCentre a,
-.navRight a {
+.navRight a,
+ .sidebar a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -296,7 +301,7 @@ nav {
 }
 
 @media screen and (max-width: 450px) {
-    .desktopMenu {
+    .desktopMenu, .loginPC, .signUpPC{
         display: none;
     }
 
@@ -307,7 +312,7 @@ nav {
     .gameInfoGrid {
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 4em 7em 15em 17em 25em 50em 20em 17em;
+        grid-template-rows: 3.5em 7em 15em 17em 25em 50em 20em 17em;
     }
 
     .gameInfoNav {
