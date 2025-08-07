@@ -175,4 +175,16 @@ ul{
         grid-template-columns: auto;
         grid-template-rows: 3.5em, 15em, 25em;
     }
+
+    .categoriesNav{
+        grid-column: 1/ span 1;
+    }
+
+    .heroText{
+        grid-column: 2/ span 1;
+    }
+
+    .mainInfoTable{
+        grid-column: 3/span 1;
+    }
 }
