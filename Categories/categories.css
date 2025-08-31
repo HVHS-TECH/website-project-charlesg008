@@ -162,6 +162,43 @@ ul{
     height: 30px;
 }
 
+@media screen and (max-width: 768px) {
+    .desktopMenu, .loginPC, .signUpPC{
+        display: none;
+    }
+    #mobileBurger{
+        display: flex;
+    }
+
+    #mobileBurger img{
+        width: 1.7em;
+        height: auto;
+        grid-column: 3/ span 1;
+    }
+
+        .categoriesGrid {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 3.2em, 15em, 25em 10em;
+    }
+
+    nav{
+        background-color: black;
+        border: none;
+    }
+
+    .heroText{
+        grid-column: 1/ span 3;
+        grid-row: 2/ span 1;
+    }
+
+    .mainInfoTable{
+        grid-column: 1/span 3;
+        grid-row: 3/ span 1;
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .desktopMenu, .loginPC, .signUpPC{
         display: none;

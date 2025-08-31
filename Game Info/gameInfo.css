@@ -230,70 +230,76 @@ nav {
     height: 30px;
 }
 
-@media screen and (max-width: 1024) {
-    .desktopMenu {
+@media screen and (max-width: 768px) {
+        nav{
+        background-color: black;
+        border: none;
+    }
+    
+    .desktopMenu, .loginPC, .signUpPC{
         display: none;
     }
-
-    #mobileBurger {
+    #mobileBurger{
         display: flex;
+    }
+
+    #mobileBurger img{
+        width: 1.7em;
+        height: auto;
+        grid-column: 3/ span 1;
     }
 
     .gameInfoGrid {
         display: grid;
-        grid-template-columns: 15% 70% 15%;
-        grid-template-rows: 4em 7em 15em 17em 25em 50em 12em 9em;
+        grid-template-columns: 20% 60% 20%;
+        grid-template-rows: 3.2em 7em 15em 17em 20em 25em 12em 12em 10em;
     }
 
     .gameInfoNav {
         width: 100%;
         list-style: none;
-        grid-column: 1;
-        grid-row: 1/ span 1;
     }
 
     .heroSection {
-        grid-column: 1;
-        grid-row: 2;
-        background-color: aqua;
+    grid-column: 1/ span 3;
+    grid-row: 2/ span 1;
+    margin-bottom: 1em;
     }
 
     .gameExpl {
-        grid-column: 1;
-        grid-row: 3;
-        background-color: blue;
+    grid-column: 1/ span 3;
+    grid-row: 3/ span 1;
     }
 
     .gameExplImg {
-        grid-column: 4;
-        grid-row: 4;
-        background-color: cadetblue;
+    grid-column: 1/ span 3;
+    grid-row: 4/ span 1;
     }
 
     .howToPlay {
-        grid-column: 1;
-        grid-row: 5;
-        background-color: pink;
+    grid-column: 1/ span 3;
+    grid-row: 5/ span 1;
+    text-align: center;
+
     }
 
     .gameTimeline {
-        grid-column: 1;
-        grid-row: 6;
-        background-color: blueviolet;
-        text-align: center;
+    grid-column: 1/ span 3;
+    grid-row: 6/ span 1;
     }
 
 
     .resources {
-        grid-column: 3;
-        grid-row: 7;
-        background-color: #767676;
+    grid-column: 1/ span 3;
+    grid-row: 7/ span 1;
+
     }
 
     .featuredPlayers {
-        grid-column: 1;
-        grid-row: 8;
-        background-color: #7ae794;
+    grid-column: 1/ span 3;
+    grid-row: 8/ span 1;
+    text-align: center;
+
     }
 
 
