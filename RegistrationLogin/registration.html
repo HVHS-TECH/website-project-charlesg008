@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, scale=1.0">
+    <link rel="stylesheet" href="registration.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- firebase start ****************************************-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- Firebase App (core Firebase SDK) always required & must be listed 1st -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js" defer></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"defer></script>
+    <!-- firebase end ******************************************-->
+
+    <script src="../Firebase/fbInitialise.js" defer></script>
+    <title>Registration</title>
+    <script defer src="reg.js"></script>
+
+</head>
+
+<form id="registrationForm">
+    <!--City-->
+    <label for="city">City (NZ)</label>
+    <input type="text" id="city" name="city" placeholder="e.g. Wellington">
+
+    <!--Pump it Up Username-->
+    <label for="piuUsername">Pump it Up Username</label>
+    <input type="text" id="piuUsername" name="piuUsername" placeholder="CFG#1036" required>
+
+    <!--Tournament Bracket-->
+    <label for="brakcet">Tournament Bracket</label>
+    <select id="bracket" name="bracket" required>
+        <option value="">-- Select Bracket --</option>
+        <option value="Novice">Novice</option>
+        <option value="NovicePlus">Novice Plus</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="IntermediatePlus">Intermediate Plus</option>
+        <option value="Advanced">Advanced</option>
+        <option value="AdvancedPlus">Advanced Plus</option>
+    </select>
+
+    <!--Submit Button-->
+    <button type="submit">Register</button>
+</form>
+
+</html>

@@ -33,7 +33,6 @@ function fb_initialise() {
     // Check if firebase already initialised
     if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
-        database = firebase.database();
     }
 }
 fb_initialise();

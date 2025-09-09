@@ -64,7 +64,7 @@ function processUser(user) {
             console.log('user exists');
         } else {
             console.log('new user detected')
-            window.location.href = 'registration.html';
+            window.location.href = '../RegistrationLogin/registration.html';
         }
     })
     .catch(function(err) {
