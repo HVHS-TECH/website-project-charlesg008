@@ -19,3 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         burgerMenu.classList.toggle('active');
     });
 });
+
+document.getElementById("loginLink").addEventListener("click", function(e) {
+    e.preventDefault();
+    fb_Googlelogin();
+});

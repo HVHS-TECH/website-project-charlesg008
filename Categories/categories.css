@@ -76,6 +76,8 @@ ul{
     padding: 1rem;
     font-size: 1.8rem;
     line-height: 1.6;
+    border: 0.2em solid white ;
+
 }
 
 .mainInfoTable th{
@@ -88,6 +90,8 @@ ul{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    border: 0.2em solid white ;
+
 }
 
 .sideImage1, .sideImage2{
@@ -95,18 +99,17 @@ filter: brightness(30%) blur(1px);
     height: 100%;
     max-width: none;
     object-fit: contain;
-    border: 1em white ;
 
 }
 
 .sideImage1{
     grid-column: 1/ span 1;
-    transform: rotate(90deg) scale(0.32);
+    transform: rotate(90deg) scale(0.46);
 }
 
 .sideImage2{
     grid-column: 5/ span 1;
-    transform: rotate(270deg) scale(0.32);
+    transform: rotate(270deg) scale(0.46);
 }
 
 .desktopMenu{

@@ -10,6 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- firebase start ****************************************-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- Firebase App (core Firebase SDK) always required & must be listed 1st -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+    <!-- firebase end ******************************************-->
+
+    <script src="../Firebase/fbInitialise.js"></script>
+    <script src="../RegistrationLogin/login.js"></script>
     <title>Homepage</title>
 </head>
 
@@ -37,7 +50,7 @@
 
 
                     <ul class="navRight">
-                        <li class="loginPC"><a href='../RegistrationLogin/login.html'>Login</a></li>
+                        <li class="loginPC"><a onclick="fb_Googlelogin();" href='#' id="loginLink">Login</a></li>
                         <li class="signUpPC"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
                     </ul>
                 </div>
@@ -61,7 +74,7 @@
         <div class="mainInfo">
             <p class="mainInfoIntro">Kia ora! And welcome to the website of the first all-inclusive
                 Pump it Up Tournament in Aotearoa New Zealand. <br> This multi-day, double-elimination style
-                tournament is open to anyone and everyone.<br> Whether you've never played, are a seasoned vet,
+                tournament is open to anyone and everyone.<br> Whether you've never played, are a regular player,
                 or have achieved the rank of<b>「THE MASTER」</b>,<br> come join us at PLAY Arcade, EVENT Cinema
                 Queensgate
                 on the 25th & 26th of October for 2 days of fun competition and community building! <br> <br> In this
