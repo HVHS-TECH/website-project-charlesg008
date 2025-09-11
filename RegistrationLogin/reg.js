@@ -15,6 +15,7 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     var piuUsername = document.getElementById("piuUsername").value;
     var bracket = document.getElementById("bracket").value;
 
+    var photoUrl = sessionStorage.getItem("photoUrl")
     var uid = sessionStorage.getItem("uid");
 
     if (!uid) {
@@ -24,28 +25,30 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         .then(function(result) {
             uid = result.user.uid;
             sessionStorage.setItem("uid", uid);
-            saveRegistration(uid, city, piuUsername, bracket)
+            saveRegistration(uid, city, piuUsername, bracket, photoUrl)
         })
         .catch(function(error) {
             console.error("login error: ", error.message);
         });
     } else {
         //user went through login button, proceed with reg
-        saveRegistration(uid, city, piuUsername, bracket);
+        saveRegistration(uid, city, piuUsername, bracket, photoUrl);
     }
 
     event.preventDefault(); // Prevent the default page reload on form submission
 });
 
-function saveRegistration(uid, city, piuUsername, bracket) {
+function saveRegistration(uid, city, piuUsername, bracket, photoUrl) {
     firebase.database().ref("userDetails/" + uid).set({
         city: city,
         piuUsername: piuUsername,
-        bracket: bracket
+        bracket: bracket,
+        profilePic: photoUrl
     }).then(function() {
         return firebase.database().ref('tournament/brackets/' + bracket + '/' +uid).set({
             piuUsername: piuUsername,
-            city: city
+            city: city,
+            profilePic: photoUrl 
         });
     }).then(function() {
         window.location.href = "../Homepage/homepage.html";

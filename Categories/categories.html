@@ -11,9 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-            <script src="../Firebase/fbInitialise.js"></script>
+    <!-- firebase start ****************************************-->
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <!-- Firebase App (core Firebase SDK) always required & must be listed 1st -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js" defer></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js" defer></script>
+    <!-- firebase end ******************************************-->
 
-    <title>Homepage</title>
+    <script src="../Firebase/fbInitialise.js" defer></script>
+    <script src="categories.js" defer></script>
+    <title>Categories</title>
 </head>
 
 <body>
@@ -25,7 +35,7 @@
                     <li onclick="hideSidebar()"><a href="#"><img id="closemenu" src="../Media/Navbar/closemenu.png"></a>
                     </li>
                     <li><a href='../Homepage/homepage.html'>Home</a></li>
-                    <li><a href='../Categories/categories.html'>Categories</a></li>
+                    <li><a href='categories.html'>Categories</a></li>
                     <li><a href='../Game Info/gameInfo.html'>Game Info</a></li>
                     <li><a href='../RegistrationLogin/login.html'>Login</a></li>
                     <li class="signUpMobTab"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
@@ -33,15 +43,18 @@
                 </ul>
                 <div class="desktopMenu">
                     <ul class="navCentre">
-                        <li><a href='../Categories/categories.html'>Categories</a></li>
-                        <li><a href=' ../Homepage/homepage.html'>Home</a></li>
+                        <li><a href='categories.html'>Categories</a></li>
+                        <li><a href='../Homepage/homepage.html'>Home</a></li>
                         <li><a href='../Game Info/gameInfo.html'>Game Info</a></li>
                     </ul>
-                </div>
 
-                <ul class="navRight">
-                    <li class="loginPC"><a href='../RegistrationLogin/login.html'>Login</a></li>
-                    <li class="signUpPC"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
+
+                    <ul class="navRight">
+                        <li class="loginPC"><a onclick="fb_Googlelogin();" href='#' id="loginLink">Login</a></li>
+                        <li class="signUpPC"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
+                    </ul>
+                </div>
+                <ul class="mobileNavTrigger">
                     <li id="mobileBurger" onclick="showSidebar()"><a href="#"><img id="openmenu"
                                 src="../Media/Navbar/openmenu.png"></a></li>
                 </ul>
@@ -51,24 +64,25 @@
 
         <div class="heroText">
             <h1>Categories</h1>
-
         </div>
 
-        <div class="sideImage1Wrap">
-            <img src="../Media/Homepage/pagesplitter.png" alt="" class="sideImage1">
-        </div>
-        <div class="categoriesTable">
-            <table class="mainTable">
-                <tr>
-                    <th>Demo</th>
-                    <td>Data</td>
-                </tr>
-            </table>
+        <div class="categoriesFlair"></div>
+
+
+        <div class="categoriesTabs">
+            <div class="bracketTabs">
+                <button class="tab active" onclick="switchBracket('Beginner', event)">Beginner</button>
+                <button class="tab" onclick="switchBracket('BeginnerPlus', event)">Beginner Plus</button>
+                <button class="tab" onclick="switchBracket('Intermediate', event)">Intermediate</button>
+                <button class="tab" onclick="switchBracket('IntermediatePlus', event)">Intermediate Plus</button>
+                <button class="tab" onclick="switchBracket('Advanced', event)">Advanced</button>
+                <button class="tab" onclick="switchBracket('AdvancedPlus', event)">Advanced Plus</button>
+
+            </div>
+
+            <div id="bracketDisplay" class="bracketTable"></div>
         </div>
 
-        <div class="sideImage2Wrap">
-            <img src="../Media/Homepage/pagesplitter.png" alt="" class="sideImage2">
-        </div>
     </div>
 </body>
 
