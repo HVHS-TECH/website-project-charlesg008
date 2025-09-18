@@ -172,6 +172,7 @@ ul {
     background-size: auto;
     background-repeat: repeat-x;
     background-position: center;
+    
 
 }
 
@@ -340,7 +341,7 @@ ul {
     grid-template-rows: 4/ span 1;
     grid-template-columns: 1/ span 5;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
     gap: 1.25rem;
     padding: 1.25rem;
     transition: opacity 0.3s ease;
@@ -392,9 +393,9 @@ ul {
 
 .playerInfo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: baseline;
-    gap: 1rem;
+    margin-left: 0.3rem; 
 }
 
 .playerInfo .username {
@@ -402,14 +403,13 @@ ul {
     font-size: 1.7rem;
     color: #fff;
     max-width: 10em;
-    white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
+    margin-bottom: -1rem;
 }
 
 .playerInfo .city {
-    font-size: 1.5rem;
-    color: #fff;
+    font-size: 1.2rem;
+    color: #c6c6c6;
 }
 
 @media screen and (max-width: 768px) {
