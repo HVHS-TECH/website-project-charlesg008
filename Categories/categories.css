@@ -311,6 +311,7 @@ ul {
     border: 0.0625rem solid #fff;
     border-bottom: 0.125rem solid #fff;
     background-color: #1f1f1f;
+    font-family: inherit;
     font-size: 1rem;
     font-weight: 500;
     transition: background-color 0.2s ease;

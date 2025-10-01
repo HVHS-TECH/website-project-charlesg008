@@ -7,7 +7,7 @@
 .gameInfoGrid {
     display: grid;
     grid-template-columns: 21% 21% 16% 21% 21%;
-    grid-template-rows: 3.5em 9em 20em 25em 25em 30em 15em;
+    grid-template-rows: 3.5em 9em auto auto auto auto 15em;
 }
 
 body {
@@ -42,7 +42,7 @@ nav {
 .gameInfoNav {
     width: 100%;
     list-style: none;
-    grid-column: 1/ span 6;
+    grid-column: 1/ span 5;
     grid-row: 1/ span 1;
 }
 
@@ -92,18 +92,48 @@ nav {
     font-size: 1.4rem;
 }
 
+.gameExplPara {
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+
 .gameExplImg {
     grid-column: 4/ span 2;
     grid-row: 3/ span 1;
 }
 
+.gameExplImg img {
+    margin-left: 10em;
+    width: 28em;
+    height: auto;
+    border: 0.08em solid white;
+    border-radius: 0.3em;
+}
+
+.cutline {
+    margin-top: 0.2em;
+    font-size: 1rem;
+    color: white;
+    font-style: italic;
+    margin-left: 10em;
+
+}
+
 .howToPlay {
     grid-column: 1/ span 4;
     grid-row: 4/ span 1;
+    font-size: 1.4rem;
+
 }
 
 .htpTitle {
     font-size: 3.2rem;
+}
+
+.htpPara {
+    white-space: pre-line;
+    line-height: 1.6;
 }
 
 .gameTimeline {
@@ -111,6 +141,19 @@ nav {
     grid-row: 5/ span 1;
     align-content: center;
     text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 40em;
+    margin: 0;
+    padding: 0;
+    border: 0.08em solid white;
+    border-bottom: none;
+    border-radius: 0.3em;
 }
 
 .gameTimelineTitle {
@@ -130,7 +173,42 @@ nav {
 
 .resourcesTitle {
     font-size: 3.2rem;
+    grid-column: 3/ span 3;
+    grid-row: 6/ span 1;
+}
 
+.resourceList {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+}
+
+.resourceList li {
+    margin-bottom: 1.5em;
+}
+
+.resourceList a {
+    font-weight: 600;
+    color: #00FFFF;
+    text-decoration: none;
+}
+
+.resourceList a:hover {
+    text-decoration: underline;
+}
+
+.resourceList p {
+    margin: 0.3em 0 0 0;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.desktopResource {
+    display: block;
+}
+
+.mobileResource {
+    display: none;
 }
 
 .featuredPlayers {
@@ -141,6 +219,7 @@ nav {
 .featuredTitle {
     font-size: 3.2rem;
 }
+
 
 .desktopMenu {
     position: relative;
@@ -163,10 +242,11 @@ nav {
 }
 
 .navRight {
+    grid-column: 5/ span 1;
     position: absolute;
     right: 0;
     display: flex;
-    align-items: center;
+    align-items: normal;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -179,7 +259,7 @@ nav {
 
 .navCentre a,
 .navRight a,
- .sidebar a {
+.sidebar a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -193,11 +273,18 @@ nav {
     background-color: #474747;
 }
 
+.mobileNavTrigger {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100%;
     width: 250px;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.445);
@@ -231,19 +318,22 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-        nav{
+    nav {
         background-color: black;
         border: none;
     }
-    
-    .desktopMenu, .loginPC, .signUpPC{
+
+    .desktopMenu,
+    .loginPC,
+    .signUpPC {
         display: none;
     }
-    #mobileBurger{
+
+    #mobileBurger {
         display: flex;
     }
 
-    #mobileBurger img{
+    #mobileBurger img {
         width: 1.7em;
         height: auto;
         grid-column: 3/ span 1;
@@ -261,44 +351,53 @@ nav {
     }
 
     .heroSection {
-    grid-column: 1/ span 3;
-    grid-row: 2/ span 1;
-    margin-bottom: 1em;
+        grid-column: 1/ span 3;
+        grid-row: 2/ span 1;
+        margin-bottom: 1em;
     }
 
     .gameExpl {
-    grid-column: 1/ span 3;
-    grid-row: 3/ span 1;
+        grid-column: 1/ span 3;
+        grid-row: 3/ span 1;
     }
 
     .gameExplImg {
-    grid-column: 1/ span 3;
-    grid-row: 4/ span 1;
+        grid-column: 1/ span 3;
+        grid-row: 4/ span 1;
     }
 
     .howToPlay {
-    grid-column: 1/ span 3;
-    grid-row: 5/ span 1;
-    text-align: center;
+        grid-column: 1/ span 3;
+        grid-row: 5/ span 1;
+        text-align: center;
 
     }
 
     .gameTimeline {
-    grid-column: 1/ span 3;
-    grid-row: 6/ span 1;
+        grid-column: 1/ span 3;
+        grid-row: 6/ span 1;
     }
 
 
     .resources {
-    grid-column: 1/ span 3;
-    grid-row: 7/ span 1;
+        grid-column: 1/ span 3;
+        grid-row: 7/ span 1;
 
     }
 
+    .desktopResource {
+        display: block;
+    }
+
+    .mobileResource {
+        display: block;
+    }
+
+
     .featuredPlayers {
-    grid-column: 1/ span 3;
-    grid-row: 8/ span 1;
-    text-align: center;
+        grid-column: 1/ span 3;
+        grid-row: 8/ span 1;
+        text-align: center;
 
     }
 
@@ -307,7 +406,10 @@ nav {
 }
 
 @media screen and (max-width: 450px) {
-    .desktopMenu, .loginPC, .signUpPC{
+
+    .desktopMenu,
+    .loginPC,
+    .signUpPC {
         display: none;
     }
 
@@ -363,6 +465,14 @@ nav {
     .resources {
         grid-column: 1;
         grid-row: 7;
+    }
+
+    .desktopResource {
+        display: none;
+    }
+
+    .mobileResource {
+        display: block;
     }
 
     .featuredPlayers {

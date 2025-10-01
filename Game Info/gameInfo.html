@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, scale=1.0">
     <link rel="stylesheet" href="gameInfo.css">
     <script src="../Misc JS Files/Navbar.js" defer></script>
-    <script src="gameInfo.js"></script>
+    <script src="gameInfo.js" defer ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
@@ -35,15 +35,15 @@
                         <li><a href='../Homepage/homepage.html'>Home</a></li>
                         <li><a href='../Game Info/gameInfo.html'>Game Info</a></li>
                     </ul>
+
+
+                    <ul class="navRight">
+                        <li class="loginPC"><a href='../RegistrationLogin/login.html'>Login</a></li>
+                        <li class="signUpPC"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
+                        <li id="mobileBurger" onclick="showSidebar()"><a href="#"><img id="openmenu"
+                                    src="../Media/Navbar/openmenu.png"></a></li>
+                    </ul>
                 </div>
-
-                <ul class="navRight">
-                    <li class="loginPC"><a href='../RegistrationLogin/login.html'>Login</a></li>
-                    <li class="signUpPC"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
-                    <li id="mobileBurger" onclick="showSidebar()"><a href="#"><img id="openmenu"
-                                src="../Media/Navbar/openmenu.png"></a></li>
-                </ul>
-
             </nav>
         </div>
         <div class="heroSection">
@@ -51,32 +51,139 @@
                 <h1>What is</h1>
             </div>
             <div class="heroImage">
-                <img src="../Media/Game Info/PiULogo.png" id="pumpLogo">
+                <img src="https://images.seeklogo.com/logo-png/26/2/pump-it-up-logo-png_seeklogo-268211.png"
+                    id="pumpLogo" alt="Pump it Up Logo">
             </div>
             <div class="heroQMark">
                 <h1>?</h1>
             </div>
         </div>
         <div class="gameExpl">
-            <p class="gameExplPara">Developed and published in 1999 by south korean game company Andamiro</p>
+            <p class="gameExplPara">Pump It Up, developed and published in 1999 by South Korean game company Andamiro,
+                is a rhythm-based dance arcade game where players step on directional arrows in time with the music.</p>
+
+            <p> Unlike DanceDanceRevolution, which uses a four-arrow layout,
+                Pump It Up features five-panels on each dance pad with diagonal arrows and a center button, encouraging
+                more dynamic and expressive footwork through a wider range of step combinations.
+            </p>
+            <p>Though it occupies a more niche corner of the rhythm game genre, it has built a loyal global following
+                thanks to its energetic K-pop tracks,
+                challenging step charts, and competitive scene.
+            </p>
+            <p>One of its standout formats is doubles play, where a single player uses both pads to perform step charts
+                that demand more stamina, precision, and spatial awareness.
+                Over the years, Pump It Up has evolved through multiple versions and international tournaments,
+                remaining a favorite among rhythm game enthusiasts.
+            </p>
         </div>
-        <div class="gameExplImg"></div>
+        <div class="gameExplImg"><img src="../Media/Game Info/PiUAUNZMeet2025.png"
+                alt="A group of 10 people posing on a pump it up machine">
+            <p class="cutline">2025 Australia & Aotearoa PiU Meetup</p>
+        </div>
         <div class="howToPlay">
             <h1 class="htpTitle">How to play</h1>
-            <p class="htpPara"></p>
+
+            <p>
+                This short section will go over helping with how to start playing, with some guidance of what to look
+                out for on levels 1 through to 10.
+            </p>
+
+            <p>
+                Pump It Up is a rhythm game played on one to two five-panel dance pads:
+                up-left, up-right, center, down-left, and down-right.
+                Singles play (one pad) on levels 1–5 typically introduce single steps and straightforward patterns,
+                helping players build
+                coordination and confidence. Arrows scroll upward on screen, and players step
+                on the matching panels as they reach the top. Make sure to use a different foot for each different arrow
+                that appears(this will come in handy with understannding patterns later) These early levels will
+                focus on basic timing, simple
+                rhythms, and familiarizing yourself with the pad layout.
+            </p>
+
+            <p> As you reach Singles levels 6–10, charts begin to include what are colloquially
+                called <em>twists</em>. These include directional changes,
+                crossing over your legs (reaching over or behind a leg with the other), that require
+                smoother transitions and weight shifts. As well as higher densities of notes (typically 4th & 8th
+                notes.) These charts
+                encourage players to think ahead and move with rhythm, rather than reacting step-by-step.
+            </p>
+
+
+            <p>
+                To support readability and timing, PiU includes tools in the <em>Command Menu</em> like <em>AV (Auto
+                    Velocity)</em>. AV helps separate dense note clusters and make patterns easier to
+                follow as charts become more visually complex by setting the scroll of the notes to a constant BPM.
+            </p>
+
+            <p>
+                If you're exploring Doubles mode, where the player uses all 10 panels, charts often emphasize
+                <em>middle-4</em> and <em>middle-6</em>
+                patterns. These layouts focus on the shared center and nearby diagonals across both pads. These patterns
+                make heavy use of twists, and may cause confusion at first. The best thing to help understand them is to
+                always use a different foot for each arrow.
+            </p>
         </div>
         <div class="gameTimeline">
             <h1 class="gameTimelineTitle">Game Timeline</h1>
             <img src="" id="gameTimelineIMG">
+            <iframe
+                src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vSCZWAzPr7_AAbwHAt7wcFl98qc6yI3SphVoNxaxcBO-wbjdtHU8N6o1fki0h4Z0xpSODOiyYAz4Fdc&font=Default&lang=en&initial_zoom=2&width=100%25&height=650&force=true'
+                webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
         </div>
         <div class="resourceImg"></div>
         <div class="resources">
             <h1 class="resourcesTitle">Resources</h1>
+            <ul class="resourceList">
+                <li>
+                    <a href="https://piugame.com/" target="_blank">Official Pump it Up Website</a>
+                    <p>Create an account to save your scores, buy avatars, and read changelogs from updates.</p>
+                </li>
+                <li>
+                    <a href="https://discord.com/invite/piugame" target="_blank">Official Pump it Up Discord </a>
+                    <p>A lively community of players from all across the globe. Share your scores, get real time help
+                        from others, suggest songs for the next game, and be the first to know when updates drop!
+                    </p>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@Nevsister" target="_blank">Nevsister YouTube</a>
+                    <p>Every official chart uploaded in full. Ideal for studying step patterns, transitions, and timing
+                        from home. A must-have reference for players at any level.</p>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@JUNARE" target="_blank">JUNARE YouTube</a>
+                    <p>Detailed “how to play” videos that break down tricky patterns, twists, and movement strategies.
+                        Great for when you're stuck on how to execute a particular chart.</p>
+                </li>
+                <li>
+                    <a href="https://pumpitup.notion.site/Pump-it-Up-Guide-34f3d65057d04e08a06c3cb7d8a1b7eb"
+                        target="_blank">Beginner’s Guide to PiU</a>
+                    <p>An indepth guide from player Yakii in how to improve from level 1 all the way to level 20.</p>
+                </li>
+
+                <!-- Desktop-only -->
+                <li class="desktopResource">
+                    <a href="https://piuscores.arroweclip.se/" target="_blank"> PiU Scores Website</a>
+                    <p>Web-based score tracker and chart browser. Gives recomendations on what to play. Excellent for
+                        analyzing performance and planning your next
+                        session.</p>
+                </li>
+
+                <!-- Mobile-only -->
+                <li class="mobileResource">
+                    <a href="https://play.google.com/store/apps/details?id=kr.goldenmine.pump_stat_app&hl=en_NZ">
+                        PumpStat Mobile App</a>
+                    <p>Community-built companion app for tracking scores, browsing charts, and analyzing performance.
+                        Great for on-the-fly decisions of what to play.</p>
+                </li>
+
+
+
+            </ul>
 
         </div>
-        <div class="featuredPlayers">
-            <h1 class="featuredTitle">Featured Players</h1>
-        </div>
+        <footer>
+
+        </footer>
 </body>
 
 </html>
