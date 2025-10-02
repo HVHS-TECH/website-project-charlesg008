@@ -8,6 +8,8 @@
     display: grid;
     grid-template-columns: 21% 21% 16% 21% 21%;
     grid-template-rows: 3.5em 9em auto auto auto auto 15em;
+    overflow-x: hidden;
+    min-width: 0;
 }
 
 body {
@@ -31,6 +33,8 @@ li {
     list-style: none;
 }
 
+
+
 nav {
     background-color: #373737;
     border-bottom: 0.1em solid white;
@@ -39,11 +43,135 @@ nav {
     overflow: hidden;
 }
 
+li {
+    list-style: none;
+}
+
 .gameInfoNav {
     width: 100%;
     list-style: none;
-    grid-column: 1/ span 5;
+    grid-column: 1/ span 6;
     grid-row: 1/ span 1;
+}
+
+.desktopMenu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#mobileBurger {
+    display: none;
+}
+
+.navCentre {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    list-style: none;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+
+.logo {
+    flex: 0 0 auto;
+    padding-left: 1rem;
+}
+
+.logo img,
+#navbarLogo {
+    height: 1.8em;
+    width: auto;
+    object-fit: contain;
+    padding-top: 0.1em;
+}
+
+
+.navRight {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-left: auto;
+    gap: 1rem;
+}
+
+.navCentre li,
+.navRight li {
+    height: 50px;
+    padding-bottom: 0.1em;
+    padding-top: 0.1em;
+}
+
+.navCentre a,
+.navRight a,
+.sidebar a {
+    height: 100%;
+    padding: 0 1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.navCentre a:hover,
+.navRight a:hover {
+    background-color: #474747;
+}
+
+.navCentre a.active,
+.navRight a.active {
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 0 0.4em white;
+}
+
+.mobileNavTrigger {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.445);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+.sidebar a:hover {
+    background-color: #14141454;
+}
+
+#openmenu {
+    width: 30px;
+    height: 30px;
+}
+
+#closemenu {
+    width: 30px;
+    height: 30px;
 }
 
 .heroSection,
@@ -101,10 +229,12 @@ nav {
 .gameExplImg {
     grid-column: 4/ span 2;
     grid-row: 3/ span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .gameExplImg img {
-    margin-left: 10em;
     width: 28em;
     height: auto;
     border: 0.08em solid white;
@@ -116,8 +246,6 @@ nav {
     font-size: 1rem;
     color: white;
     font-style: italic;
-    margin-left: 10em;
-
 }
 
 .howToPlay {
@@ -131,10 +259,48 @@ nav {
     font-size: 3.2rem;
 }
 
-.htpPara {
-    white-space: pre-line;
+.htpRow {
+    display: grid;
+    grid-template-columns: 1fr 25%;
+    gap: 1rem;
+    align-items: start;
+    margin: 2rem 0;
+}
+
+.htpRow img {
+    grid-column: 2;
+    width: 100%;
+    width: 15rem;
+    height: auto;
+    object-fit: cover;
+    justify-self: center;
+    border: 0.08em solid white;
+    border-radius: 0.3em;
+}
+
+.htpRow h3,
+.htpRow p {
+    grid-column: 1;
+    margin: 0;
     line-height: 1.6;
 }
+
+.htpHeader {
+    margin: 0 0 0.75rem 0;
+    font-size: 2rem;
+}
+
+.htpRow p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+hr {
+    border: 0;
+    border-top: 0.1rem solid;
+    margin: 2rem 0;
+}
+
 
 .gameTimeline {
     grid-column: 1/ span 5;
@@ -220,102 +386,6 @@ iframe {
     font-size: 3.2rem;
 }
 
-
-.desktopMenu {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-#mobileBurger {
-    display: none;
-}
-
-.navCentre {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    position: relative;
-}
-
-.navRight {
-    grid-column: 5/ span 1;
-    position: absolute;
-    right: 0;
-    display: flex;
-    align-items: normal;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navCentre li,
-.navRight li {
-    height: 50px;
-}
-
-.navCentre a,
-.navRight a,
-.sidebar a {
-    height: 100%;
-    padding: 0 30px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.navCentre a:hover,
-.navRight a:hover {
-    background-color: #474747;
-}
-
-.mobileNavTrigger {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 250px;
-    z-index: 999;
-    background-color: rgba(0, 0, 0, 0.445);
-    backdrop-filter: blur(10px);
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.sidebar li {
-    width: 100%;
-}
-
-.sidebar a {
-    width: 100%;
-}
-
-.sidebar a:hover {
-    background-color: #14141454;
-}
-
-#openmenu {
-    width: 30px;
-    height: 30px;
-}
-
-#closemenu {
-    width: 30px;
-    height: 30px;
-}
 
 @media screen and (max-width: 768px) {
     nav {

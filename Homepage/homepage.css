@@ -8,7 +8,7 @@
 .homepageGrid {
     display: grid;
     grid-template-columns: 21% 21% 16% 21% 21%;
-    grid-template-rows: 3.5em 39.55em 3em 45em 12em;
+    grid-template-rows: 3.5em auto auto 45em 12em;
 }
 
 body {
@@ -47,32 +47,57 @@ li {
     grid-row: 1/ span 1;
 }
 
+.desktopMenu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 #mobileBurger {
     display: none;
 }
 
 .navCentre {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     list-style: none;
-    padding: 0;
     margin: 0 auto;
-    position: relative;
+    gap: 1rem;
 }
 
+
+.logo {
+    flex: 0 0 auto;
+    padding-left: 1rem;
+}
+
+.logo img,
+#navbarLogo {
+    height: 1.8em;
+    width: auto;
+    object-fit: contain;
+    padding-top: 0.1em;
+}
+
+
 .navRight {
-    grid-column: 5/ span 1;
-    position: absolute;
-    right: 0;
     display: flex;
-    align-items: normal;
+    align-items: center;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-left: auto;
+    gap: 1rem;
 }
 
 .navCentre li,
 .navRight li {
     height: 50px;
+    padding-bottom: 0.1em;
+    padding-top: 0.1em;
 }
 
 .navCentre a,
@@ -91,11 +116,18 @@ li {
     background-color: #474747;
 }
 
+.navCentre a.active,
+.navRight a.active {
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 0 0.4em white;
+}
+
 .mobileNavTrigger {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .sidebar {
@@ -185,7 +217,7 @@ li {
 
 .splitDates,
 .splitLocation {
-    padding: 0.5rem;
+    padding: 0.5em 1em 0.5em 1em;
 }
 
 .splitDates {
@@ -203,10 +235,10 @@ li {
 }
 
 .mainInfoIntro {
-    padding: 1rem;
     text-align: center;
     font-size: 1.4rem;
     line-height: 1.6;
+    padding: 1.6rem 0 1rem 0;
 }
 
 .mainInfoCategories {
@@ -255,71 +287,64 @@ li {
 
 }
 
-.desktopMenu {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
 
 @media screen and (max-width: 768px) {
 
-        .desktopMenu,
+    .desktopMenu,
     .loginPC,
     .signUpPC {
         display: none;
     }
 
-      .mobileNavTrigger {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 2em;
-    padding-right: 1rem;
-  }
+    .mobileNavTrigger {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 2em;
+        padding-right: 1rem;
+    }
 
-  #mobileBurger{
-    display: flex;
-    position: relative;
-  }
+    #mobileBurger {
+        display: flex;
+        position: relative;
+    }
 
-    #mobileBurger img{
+    #mobileBurger img {
         width: 1.7em;
         height: auto;
         grid-column: 3/ span 1;
     }
 
-        .homepageGrid {
+    .homepageGrid {
         display: grid;
         grid-template-columns: 20% 60% 20%;
         grid-template-rows: 3.2em 35.9em 3.2em 64em 10em 10em;
     }
 
-    nav{
+    nav {
         background-color: black;
         border: none;
     }
 
-    .heroSection{
+    .heroSection {
         grid-column: 1/ span 3;
         grid-row: 2/ span 1;
         background-image: url("../Media/Homepage/heroimagealternate2.png");
         background-size: cover;
     }
 
-    .heroText h1{
+    .heroText h1 {
         font-size: 5em;
         text-align: center;
         background-color: rgba(0, 0, 0, 0.589);
     }
 
 
-    .pageSplit h2{
+    .pageSplit h2 {
         padding-bottom: 2em;
     }
 
-    .mainInfo{
+    .mainInfo {
         grid-column: 1/ span 3;
         grid-row: 4/ span 1;
     }
@@ -335,20 +360,20 @@ li {
         display: none;
     }
 
-      .mobileNavTrigger {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 2em;
-    padding-right: 1rem;
-  }
+    .mobileNavTrigger {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 2em;
+        padding-right: 1rem;
+    }
 
-  #mobileBurger{
-    display: flex;
-    position: relative;
-  }
+    #mobileBurger {
+        display: flex;
+        position: relative;
+    }
 
-    #mobileBurger img{
+    #mobileBurger img {
         width: 2em;
         height: auto;
     }
@@ -380,7 +405,7 @@ li {
         text-align: center;
     }
 
-    .heroText h1{
+    .heroText h1 {
         padding-right: 0.2em;
     }
 

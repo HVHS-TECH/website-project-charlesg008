@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, scale=1.0">
     <link rel="stylesheet" href="gameInfo.css">
     <script src="../Misc JS Files/Navbar.js" defer></script>
-    <script src="gameInfo.js" defer ></script>
+    <script src="gameInfo.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap"
@@ -24,26 +24,37 @@
                     </li>
                     <li><a href='../Homepage/homepage.html'>Home</a></li>
                     <li><a href='../Categories/categories.html'>Categories</a></li>
-                    <li><a href='../Game Info/gameInfo.html'>Game Info</a></li>
+                    <li><a href='gameInfo.html'>Game Info</a></li>
                     <li><a href='../RegistrationLogin/login.html'>Login</a></li>
                     <li class="signUpMobTab"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
 
                 </ul>
                 <div class="desktopMenu">
+                    <a href="../Homepage/homepage.html">
+                        <img src="/Media/Logo/PiUAotearoa.png" id="navbarLogo" alt="Pump it Up Aotearoa Logo">
+                    </a>
                     <ul class="navCentre">
-                        <li><a href='../Categories/categories.html'>Categories</a></li>
                         <li><a href='../Homepage/homepage.html'>Home</a></li>
-                        <li><a href='../Game Info/gameInfo.html'>Game Info</a></li>
+                        <li><a href='gameInfo.html' class="active">Game Info</a></li>
+                        <li><a href='../Categories/categories.html'>Categories</a></li>
                     </ul>
 
 
                     <ul class="navRight">
-                        <li class="loginPC"><a href='../RegistrationLogin/login.html'>Login</a></li>
+                        <li class="loginPC"><a onclick="fb_Googlelogin();" href='#' id="loginLink">Login</a></li>
                         <li class="signUpPC"><a href='../RegistrationLogin/registration.html'>Sign up</a></li>
-                        <li id="mobileBurger" onclick="showSidebar()"><a href="#"><img id="openmenu"
-                                    src="../Media/Navbar/openmenu.png"></a></li>
                     </ul>
                 </div>
+                <ul class="mobileNavTrigger">
+                    <div class="logoMobile">
+                        <a href="../Homepage/homepage.html">
+                            <img src="/Media/Logo/PiUAotearoa.png" id="navbarLogo" alt="Pump it Up Aotearoa Logo">
+                        </a>
+                    </div>
+                    <li id="mobileBurger" onclick="showSidebar()"><a href="#"><img id="openmenu"
+                                src="../Media/Navbar/openmenu.png"></a></li>
+                </ul>
+
             </nav>
         </div>
         <div class="heroSection">
@@ -83,49 +94,90 @@
         <div class="howToPlay">
             <h1 class="htpTitle">How to play</h1>
 
-            <p>
-                This short section will go over helping with how to start playing, with some guidance of what to look
-                out for on levels 1 through to 10.
-            </p>
+            <article class="htpRow">
+                <h3 class="htpHeader">Overview</h3>
+                <p>
+                    This short section will go over helping with how to start playing, with some guidance of what to
+                    look
+                    out for on levels 1 through to 10.
+                </p>
+                <figure>
+                    <img src="../Media/Game Info/PumpLXCab.jpg" alt="Pump it Up Command Window">
+                    <figcaption class="cutline">An LX style cab running Prime 2</figcaption>
+                </figure>
+            </article>
+            <hr>
 
-            <p>
-                Pump It Up is a rhythm game played on one to two five-panel dance pads:
-                up-left, up-right, center, down-left, and down-right.
-                Singles play (one pad) on levels 1–5 typically introduce single steps and straightforward patterns,
-                helping players build
-                coordination and confidence. Arrows scroll upward on screen, and players step
-                on the matching panels as they reach the top. Make sure to use a different foot for each different arrow
-                that appears(this will come in handy with understannding patterns later) These early levels will
-                focus on basic timing, simple
-                rhythms, and familiarizing yourself with the pad layout.
-            </p>
+            <article class="htpRow">
+                <h3 class="htpHeader">The Basics</h3>
+                <p>
+                    Pump It Up is a rhythm game played on one to two five-panel dance pads:
+                    up-left, up-right, center, down-left, and down-right.<br>
+                    Singles play (one pad) on levels 1–5 typically introduce single steps and straightforward patterns,
+                    helping players build
+                    coordination and confidence. Arrows scroll upward on screen, and players step
+                    on the matching panels as they reach the top.<br> Make sure to use a different foot for each different
+                    arrow
+                    that appears(this will come in handy with understannding patterns later.) These early levels will
+                    focus on basic timing, simple
+                    rhythms, and familiarizing yourself with the pad layout.
+                </p>
+                <figure>
+                    <img src="../Media/Game Info/CommandWindow.png" alt="Pump it Up Command Window">
+                    <figcaption class="cutline">Singles gamemode layout</figcaption>
+                </figure>
+            </article>
+            <hr>
+            <article class="htpRow">
+                <h3 class="htpHeader">Twists & Turns</h3>
+                <p> As you reach Singles levels 6–10, charts begin to include what are colloquially
+                    called <em>twists</em>.<br> These include directional changes,
+                    crossing over your legs (reaching over or behind a leg with the other,) that require
+                    smoother transitions and weight shifts.<br> These levels also have higher densities of notes (typically 4th & 8th
+                    notes.)<br> These charts
+                    encourage players to think ahead and move with rhythm, rather than reacting step-by-step.
+                </p>
+                <figure>
+                    <img src="../Media/Game Info/CommandWindow.png" alt="Pump it Up Command Window">
+                    <figcaption class="cutline">A common twist pattern</figcaption>
+                </figure>
+            </article>
+            <hr>
 
-            <p> As you reach Singles levels 6–10, charts begin to include what are colloquially
-                called <em>twists</em>. These include directional changes,
-                crossing over your legs (reaching over or behind a leg with the other), that require
-                smoother transitions and weight shifts. As well as higher densities of notes (typically 4th & 8th
-                notes.) These charts
-                encourage players to think ahead and move with rhythm, rather than reacting step-by-step.
-            </p>
+            <article class="htpRow">
 
+                <h3 class="htpHeader">Auto Velocity Advantage</h3>
+                <p>
+                    To support readability and timing, PiU includes tools in the <em>Command Menu</em> like <em>AV (Auto
+                        Velocity)</em>.<br> AV helps separate dense note clusters and make patterns easier to
+                    follow as charts become more visually complex by setting the scroll of the notes to a constant BPM.
+                </p>
+                <figure>
+                    <img src="../Media/Game Info/CommandWindow.png" alt="Pump it Up Command Window">
+                    <figcaption class="cutline">Pump it Up Command Menu</figcaption>
+                </figure>
+            </article>
+            <hr>
+            <article class="htpRow">
+                <h3 class="htpHeader">Double the Challenge</h3>
+                <p>
+                    If you're exploring Doubles mode, where the player uses all 10 panels, charts often emphasize
+                    <em>middle-4</em> and <em>middle-6</em>
+                    patterns.<br> These layouts focus on the shared center and nearby diagonals across both pads,
+                    making heavy use of twists, and may cause confusion at first.<br> The best thing to help understand them
+                    is to remember
+                    to always use a different foot for each arrow.
+                </p>
+                <figure>
+                    <img src="../Media/Game Info/CommandWindow.png" alt="Pump it Up Command Window">
+                    <figcaption class="cutline">Doubles gamemode layout</figcaption>
+                </figure>
+            </article>
+            <hr>
 
-            <p>
-                To support readability and timing, PiU includes tools in the <em>Command Menu</em> like <em>AV (Auto
-                    Velocity)</em>. AV helps separate dense note clusters and make patterns easier to
-                follow as charts become more visually complex by setting the scroll of the notes to a constant BPM.
-            </p>
-
-            <p>
-                If you're exploring Doubles mode, where the player uses all 10 panels, charts often emphasize
-                <em>middle-4</em> and <em>middle-6</em>
-                patterns. These layouts focus on the shared center and nearby diagonals across both pads. These patterns
-                make heavy use of twists, and may cause confusion at first. The best thing to help understand them is to
-                always use a different foot for each arrow.
-            </p>
         </div>
         <div class="gameTimeline">
             <h1 class="gameTimelineTitle">Game Timeline</h1>
-            <img src="" id="gameTimelineIMG">
             <iframe
                 src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=v2%3A2PACX-1vSCZWAzPr7_AAbwHAt7wcFl98qc6yI3SphVoNxaxcBO-wbjdtHU8N6o1fki0h4Z0xpSODOiyYAz4Fdc&font=Default&lang=en&initial_zoom=2&width=100%25&height=650&force=true'
                 webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
@@ -172,7 +224,8 @@
                 <li class="mobileResource">
                     <a href="https://play.google.com/store/apps/details?id=kr.goldenmine.pump_stat_app&hl=en_NZ">
                         PumpStat Mobile App</a>
-                    <p>Community-built companion app for tracking scores, browsing charts, and analyzing performance.
+                    <p>Community-built Android companion app for tracking scores, browsing charts, and analyzing
+                        performance.
                         Great for on-the-fly decisions of what to play.</p>
                 </li>
 

@@ -16,19 +16,18 @@
     <!-- Firebase App (core Firebase SDK) always required & must be listed 1st -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js" defer></script>
     <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"defer></script>
-    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"defer></script>
-    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js" defer></script>
     <!-- firebase end ******************************************-->
 
-    <script src="../Firebase/fbInitialise.js"defer></script>
-    <script src="../RegistrationLogin/login.js"defer></script>
+    <script src="../Firebase/fbInitialise.js" defer></script>
+    <script src="../RegistrationLogin/login.js" defer></script>
     <title>Homepage</title>
 </head>
 
 <body>
     <div class="homepageGrid">
-        <div class="logo"></div>
         <div class="homepageNav">
             <nav>
                 <ul class="sidebar">
@@ -42,10 +41,15 @@
 
                 </ul>
                 <div class="desktopMenu">
+                    <div class="logo">
+                        <a href="homepage.html">
+                            <img src="/Media/Logo/PiUAotearoa.png" id="navbarLogo" alt="Pump it Up Aotearoa Logo">
+                        </a>
+                    </div>
                     <ul class="navCentre">
-                        <li><a href='../Categories/categories.html'>Categories</a></li>
-                        <li><a href='homepage.html'>Home</a></li>
+                        <li><a href='homepage.html' class="active">Home</a></li>
                         <li><a href='../Game Info/gameInfo.html'>Game Info</a></li>
+                        <li><a href='../Categories/categories.html'>Categories</a></li>
                     </ul>
 
 
@@ -55,6 +59,11 @@
                     </ul>
                 </div>
                 <ul class="mobileNavTrigger">
+                    <div class="logoMobile">
+                        <a href="../Homepage/homepage.html">
+                            <img src="/Media/Logo/PiUAotearoa.png" id="navbarLogo" alt="Pump it Up Aotearoa Logo">
+                        </a>
+                    </div>
                     <li id="mobileBurger" onclick="showSidebar()"><a href="#"><img id="openmenu"
                                 src="../Media/Navbar/openmenu.png"></a></li>
                 </ul>
@@ -83,7 +92,7 @@
                 The scores from these 3 songs will be added up, and whomever's score is the highest wins!
             </p>
             <hr>
-            <p class="mainInfoCategories">We have 6 different categories for you to join based on skill level
+            <p class="mainInfoCategories">We have 6 different categories for you to join based on skill level:
             <table class="mainInfoTable">
                 <tr>
                     <th>Beginner</th>
